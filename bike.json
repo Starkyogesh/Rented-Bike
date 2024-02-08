@@ -1,0 +1,65 @@
+{
+    "Bikes":[
+        {
+            "id":1,
+            "make":"Yamaha",
+            "model":"Rx100",
+            "Price_per_day":200,
+            "description":"The Yamaha RX 100 was a two-stroke motorcycle made by Yamaha from 1985 to 1996 with technical collaboration and distributed in India by the Escorts Group. At the initial stage, Yamaha Japan was exporting all bikes from Japan to India. After 1990, Escorts started production in India, with some parts being imported from Japan.",
+            "Properties":{
+                "power_hp":11,
+                "fuel_type":"Fuel",
+                "engine_capacity":"100CC"
+            }
+        },
+        {
+            "id":2,
+            "make":"Yamaha",
+            "model":"Fz",
+            "Price_per_day":150,
+            "description":"It all started with the FZ-16 that was introduced in India back in 2008. It was the bike all the young guns wanted. Those broad shoulder lines on the fuel tank and that wide rear tyre which Yamaha turned the spotlight on were sure to leave the college girls weak in the knees.",
+            "Properties":{
+                "power_hp":12,
+                "fuel_type":"Fuel",
+                "engine_capacity":"149CC"
+            }
+        },
+        {
+            "id":3,
+            "make":"BMW",
+            "model":"R 1250",
+            "Price_per_day":250,
+            "description":"The BMW R1250GS is a motorcycle manufactured in Berlin, Germany by BMW Motorrad, part of the BMW group. It is one of the BMW GS family of dual sport motorcycles. It has a 1,254 cc (76.5 cu in), two-cylinder boxer engine with four valves per cylinder and variable valve timing (VVT).",
+            "Properties":{
+                "power_hp":13,
+                "fuel_type":"Fuel",
+                "engine_capacity":"1254CC"
+            }
+        },
+        {
+            "id":4,
+            "make":"Yamaha",
+            "model":"R15",
+            "Price_per_day":170,
+            "description":"he Yamaha YZF-R15 is a single-cylinder sport bike made by Yamaha Motor Company in 2008.[1] In September 2011, the second iteration, called v2.0, was released in India,[2] and in April 2014 it was released in Indonesia.[3] In January 2017, the bike's third iteration, v3.0, was launched in Indonesia.",
+            "Properties":{
+                "power_hp":12,
+                "fuel_type":"Fuel",
+                "engine_capacity":"149CC"
+            }
+        },
+        {
+            "id":5,
+            "make":"Royal Enfield",
+            "model":"Bullet",
+            "Price_per_day":260,
+            "description":"Royal Enfield is an Indian multinational motorcycle manufacturing company, headquartered in Chennai. The Royal Enfield brand, including its original English heritage, is the oldest global motorcycle brand in continuous production.[3] The company operates manufacturing plants in Chennai in India.",
+            "Properties":{
+                "power_hp":12,
+                "fuel_type":"Fuel",
+                "engine_capacity":"650CC"
+            }
+        }
+
+    ]
+}
