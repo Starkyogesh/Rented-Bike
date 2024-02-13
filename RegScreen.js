@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {Text,View,TextInput,StyleSheet,TouchableOpacity, Alert} from 'react-native';
+import {Text,View,TextInput,StyleSheet,TouchableOpacity, Alert, Image} from 'react-native';
 import { insertUser } from './SqlData';
 
 const registerPage = (navigation)=>{
@@ -38,7 +38,12 @@ const registerPage = (navigation)=>{
     return(
         <View style={styles.body}>
             <View style={styles.heading}>
-                <Text style={styles.headingtext}>Register</Text>
+              <Image
+                source={require("C:/Users/Yogesh/Desktop/project/Project1/LogReg/logo.jpg")}  
+                resizeMode='contain'
+                style={styles.logoimg}
+              />
+              <Text style={styles.headtext}>SignIn</Text>
 
                 <View style={styles.form}>
                     <Text style={styles.name}>Name</Text>
@@ -46,7 +51,7 @@ const registerPage = (navigation)=>{
                     <Text style={styles.mail}>Email Id</Text>
                     <TextInput placeholder="Enter Mail id" placeholderTextColor="white" style={styles.inp2} onChangeText={(text)=>setUserMail(text)}></TextInput>
                     <Text style={styles.pass}>Password</Text>
-                    <TextInput placeholder="Enter Password" placeholderTextColor="white" style={styles.inp3} onChangeText={(text)=>setPassword(text)}></TextInput>
+                    <TextInput placeholder="Enter Password" secureTextEntry={true} placeholderTextColor="white" style={styles.inp3} onChangeText={(text)=>setPassword(text)}></TextInput>
                 </View>
 
                 <View style={styles.btnview}>
@@ -62,79 +67,90 @@ const registerPage = (navigation)=>{
 
 const styles=StyleSheet.create({
   body:{
-    backgroundColor:'silver',
     height:'100%',
+    backgroundColor:'white',
   },
 
   heading:{
-    backgroundColor:'black',
     height:600,
     top:40,
     width:'90%',
     left:20,
     borderRadius:30,
+    backgroundColor:'white',
   },
 
-  headingtext:{
+  logoimg:{
+    height:300,
+    width:400,
+    right:35,
+    bottom:120
+  },
+
+  headtext:{
+    position:'absolute',
     fontWeight:'bold',
-    textAlign:'center',
-    fontSize:30,
-    top:'2%',
-    color:'white',
+    fontSize:45,
+    left:100,
+    color:'black',
+    top:100,
+    textDecorationLine:'underline',
   },
 
   form:{
-    backgroundColor:'silver',
-    height:500,
-    top:20,
-    width:'80%',
-    left:35,
-    borderRadius:30,
-    shadowColor:'sliver',
-    shadowOpacity:50,
-    elevation:20,
-    shadowRadius:30,
+    position:'absolute',
+    height:400,
+    top:160,
+    width:'100%',
+    backgroundColor:'white',
   },
 
   name:{
     fontSize:25,
     top:'4%',
-    color:'blue'
+    color:'blue',
+    fontWeight:'bold',
   },
 
   mail:{
     fontSize:25,
     top:'4%',
-    color:'blue'
+    color:'blue',
+    fontWeight:'bold',
   },
 
   pass:{
     fontSize:25,
     top:'4%',
-    color:'blue'
+    color:'blue',
+    fontWeight:'bold',
   },
 
   inp1:{
     fontSize:30,
     backgroundColor:'darkgray',
     top:'4%',
+    borderRadius:50
   },
 
   inp2:{
     fontSize:30,
     backgroundColor:'darkgray',
     top:'4%',
+    borderRadius:50
   },
 
   inp3:{
     fontSize:30,
     backgroundColor:'darkgray',
     top:'4%',
+    borderRadius:50
   },
 
   btnview:{
     flexDirection:'row',
     justifyContent:'center',
+    top:300,
   },
 
   btn1:{
