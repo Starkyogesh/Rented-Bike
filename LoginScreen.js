@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import {Text,View,TextInput,StyleSheet,TouchableOpacity,Alert} from 'react-native';
+import {Text,View,TextInput,StyleSheet,TouchableOpacity,Alert,Image} from 'react-native';
 import { getUser } from './SqlData'; 
 
 
@@ -39,14 +39,18 @@ const loginPagess = ({navigation})=>{
     return(
         <View style={styles.body}>
             <View style={styles.heading}>
-                <Text style={styles.headingtext}>WelCome To MyApp</Text>
+            <Image
+                source={require("C:/Users/Yogesh/Desktop/project/Project1/LogReg/logo.jpg")}  
+                resizeMode='contain'
+                style={styles.logoimg}
+            />
 
             <View style={styles.log}> 
                 <Text style={styles.heading2}>Login</Text>
                 <Text style={styles.loginn}>Login</Text>
                 <TextInput placeholder="Enter Name" placeholderTextColor='white' style={styles.input1} onChangeText={(text) => setUserName(text)}/>
                 <Text style={styles.pass}>Password</Text>
-                <TextInput placeholder="Enter Password" placeholderTextColor='white' style={styles.input2} onChangeText={(text) => setPassword(text)}/>
+                <TextInput placeholder="Enter Password" secureTextEntry={true} placeholderTextColor='white' style={styles.input2} onChangeText={(text) => setPassword(text)}/>
 
           
                 <View style={styles.btnview}>
@@ -55,7 +59,7 @@ const loginPagess = ({navigation})=>{
                     </TouchableOpacity>
 
                     <View style={styles.regView}>
-                        <Text>If Your A New User ?</Text>
+                        <Text style={styles.regTxt}>If Your A New User ?</Text>
                         <TouchableOpacity onPress={()=>navigation.navigate('SignPage')}>
                             <Text style={styles.reg}>Register</Text>
                         </TouchableOpacity>
@@ -70,12 +74,12 @@ const loginPagess = ({navigation})=>{
 
 const styles=StyleSheet.create({
   body:{
-    backgroundColor:'silver',
+    backgroundColor:'white',
     height:'100%',
   },
 
   heading:{
-    backgroundColor:'black',
+    backgroundColor:'white',
     height:600,
     top:30,
     width:'90%',
@@ -83,55 +87,54 @@ const styles=StyleSheet.create({
     borderRadius:30,
   },
 
-  headingtext:{
-    fontWeight:'bold',
-    textAlign:'center',
-    fontSize:30,
-    top:'5%',
-    color:'white',
+  logoimg:{ 
+    position:'absolute',
+    height:500,
+    width:'100%',
+    bottom:300,
   },
 
   log:{
-    backgroundColor:'silver',
     height:'70%',
-    top:60,
-    width:'80%',
-    left:35,
+    top:150,
+    width:'100%',
     borderRadius:30,
-    shadowColor:'sliver',
-    shadowOpacity:50,
-    elevation:20,
-    shadowRadius:30,
   },
 
   heading2:{
     textAlign:'center',
     fontWeight:'bold',
     fontSize:30,
+    color:'black',
+    textDecorationLine:'underline',
   },
 
   loginn:{
     fontSize:25,
     top:10,
     color:'blue',
+    fontWeight:'bold',
   },
 
   input1:{
     top:'5%',
     fontSize:30,
     backgroundColor:'darkgray',
+    borderRadius:50,
   },
 
   pass:{
     top:'5%',
     fontSize:25,
     color:'blue',
+    fontWeight:'bold',
   },
 
   input2:{
     top:'5%',
     fontSize:30,
     backgroundColor:'darkgray',
+    borderRadius:50,
   },
 
   btnview:{
@@ -159,11 +162,18 @@ const styles=StyleSheet.create({
     width:'90%',
   },
 
+  regTxt:{
+    color:'black',
+    fontWeight:'bold',
+    left:20
+  },
+
   reg:{
-    left:'80%',
+    left:160,
     bottom:'100%',
     textDecorationLine:'underline',
     color:'blue',
+    fontWeight:'bold'
   },
 });
 
